@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Pans.css">
+    <link rel="icon" href="websiteIcon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="Script.js" defer></script>
+    <title>OnlyPans</title>
+
+    <style>
+        .dropdown-menu button:hover {
+            background-color: rgb(157, 235, 157);
+        }
+
+        @media (width<800px) {
+
+            .search-input {
+                visibility: hidden;
+            }
+
+            .search-icon {
+                visibility: hidden;
+            }
+
+            #search-container {
+                visibility: visible;
+            }
+
+            #search-container>button {
+                width: 25px;
+                height: 25px;
+                background-image: url(search.svg);
+                border: none;
+                background-color:#bbbbbb;
+                position: absolute;
+                left: 50%;
+                top: 8px;
+                transition: 0.3s;
+            }
+
+            #search-bar input {
+                padding: 5px;
+                font-size: 16px;
+                position: absolute;
+                left: 100px;
+                border: 1px solid #ccc;
+                border-radius: 20px;
+                width: 200px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <button onclick="toggleMenu()" class="burger"></button>
+        <button onclick="goToFirstPage()"  class="Homebutton">Home</button>
+        <div class="navDropdowns">
+
+            <div class="Dropdown">
+                <button class="navbutton">
+                    Recipes
+                    <img src="ChevronDown.svg" />
+                </button>
+                <div class="dropdown-menu">
+                    <button onclick="goToBreakfastRecipePage()">Breakfast</button>
+                    <button onclick="goToLunchPage()">Lunch</button>
+                    <button>Dinner</button>
+                    <button>Desert</button>
+                </div>
+            </div>
+            <div class="Dropdown">
+                <button class="navbutton">
+                    Videos
+                    <img src="ChevronDown.svg" />
+                </button>
+                <div class="dropdown-menu">
+                    <button>Breakfast</button>
+                    <button>Lunch</button>
+                    <button>Dinner</button>
+                    <button>Desert</button>
+                </div>
+            </div>
+            <div class="Dropdown">
+                <button class="navbutton">
+                    Submit Recipes
+                    <img src="ChevronDown.svg" />
+                </button>
+                <div class="dropdown-menu">
+                    <button>Featured Submissions</button>
+                    <button onclick="goToSubmitRecipesPage()">Submit a Recipe Form</button>
+                    <button>Submit a Recipe Video</button>
+                    <button>Guidelines</button>
+                </div>
+            </div>
+            <div class="search-bar">
+
+                <input type="text" class="search-input" placeholder="Search...">
+                <button class="search-icon" type="submit"></button>
+
+                <div id="search-container">
+                    <button onclick="toggleSearch()"></button>
+                    <div id="search-bar">
+                        <form>
+                            <input type="text" placeholder="Search...">
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <img class="webicon" src="websiteIcon.png">
+        <h1>Videos for Breakfast Recipes</h1>
+    </nav>
+
+    <div class="video-container">
+        <!-- Replace "VIDEO_ID" with the actual video ID from YouTube -->
+        <h1 class="medamesTitle">Foul Medames</h1>
+        <iframe class="medames" src="https://www.youtube.com/embed/J32Sh5LfrwA" frameborder="0" allowfullscreen></iframe>
+
+        <h1 class="EnglishBreakfastTitle">English Breakfast</h1>
+        <iframe class="EnglishBreakfast" src="https://www.youtube.com/embed/P-WNLRsLlvE" frameborder="0" allowfullscreen></iframe>
+
+        <h1 class="PankackesTitle">Pankcakes</h1>
+        <iframe class="Pancakes" src="https://www.youtube.com/embed/FLd00Bx4tOk" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">our service</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affilitate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#">Email</a></li>
+                        <li><a href="#">Phone number<br> 01002701392</a></li>
+                        <li><a href="#">Location <br> Cairo, Maadi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>cuisines</h4>
+                    <ul>
+                        <li><a href="#">italian</a></li>
+                        <li><a href="#">middle eastern</a></li>
+                        <li><a href="#">french</a></li>
+                        <li><a href="#">american</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

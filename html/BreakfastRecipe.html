@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Pans.css">
+    <link rel="icon" href="websiteIcon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="Script.js" defer></script>
+    <title>OnlyPans</title>
+
+    <style>
+        .dropdown-menu button:hover {
+            background-color: rgb(157, 235, 157);
+        }
+
+        @media (width<800px) {
+
+            .search-input {
+                visibility: hidden;
+            }
+
+            .search-icon {
+                visibility: hidden;
+            }
+
+            #search-container {
+                visibility: visible;
+            }
+
+            #search-container>button {
+                width: 25px;
+                height: 25px;
+                background-image: url(search.svg);
+                border: none;
+                background-color: #bbbbbb;
+                position: absolute;
+                left: 50%;
+                top: 8px;
+                transition: 0.3s;
+            }
+
+            #search-bar input {
+                padding: 5px;
+                font-size: 16px;
+                position: absolute;
+                left: 100px;
+                border: 1px solid #ccc;
+                border-radius: 20px;
+                width: 200px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <button onclick="toggleMenu()" class="burger"></button>
+        <button onclick="goToFirstPage()" class="Homebutton">Home</button>
+        <div class="navDropdowns">
+
+            <div class="Dropdown">
+                <button class="navbutton">
+                    Recipes
+                    <img src="ChevronDown.svg" />
+                </button>
+                <div class="dropdown-menu">
+                    <button>Breakfast</button>
+                    <button onclick="goToLunchPage()">Lunch</button>
+                    <button>Dinner</button>
+                    <button>Desert</button>
+                </div>
+            </div>
+            <div class="Dropdown">
+                <button class="navbutton">
+                    Videos
+                    <img src="ChevronDown.svg" />
+                </button>
+                <div class="dropdown-menu">
+                    <button onclick=" goToVideoBreakfastPage()">Breakfast</button>
+                    <button>Lunch</button>
+                    <button>Dinner</button>
+                    <button>Desert</button>
+                </div>
+            </div>
+            <div class="Dropdown">
+                <button class="navbutton">
+                    Submit Recipes
+                    <img src="ChevronDown.svg" />
+                </button>
+                <div class="dropdown-menu">
+                    <button>Featured Submissions</button>
+                    <button onclick="goToSubmitRecipesPage()">Submit a Recipe Form</button>
+                    <button>Submit a Recipe Video</button>
+                    <button>Guidelines</button>
+
+                </div>
+            </div>
+            <div class="search-bar">
+
+                <input type="text" class="search-input" placeholder="Search...">
+                <button class="search-icon" type="submit"></button>
+
+                <div id="search-container">
+                    <button onclick="toggleSearch()"></button>
+                    <div id="search-bar">
+                        <form>
+                            <input type="text" placeholder="Search...">
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <img class="webicon" src="websiteIcon.png">
+        <h1>Breakfast Recipes</h1>
+    </nav>
+
+
+    <div class="main">
+        <ul class="cards">
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><img
+                            src="https://i.pinimg.com/564x/ee/69/c9/ee69c9f5b93d8413c031a365082bf561.jpg"></div>
+                    <div class="card_content">
+                        <h2 class="card_title"> Pancakes</h2>
+                        <div class="card_text">
+                            <p>Recipe:</p>
+                            <p>Refrigerated:<br>
+                                • 1 Egg
+                                • 1/2 cup Vanilla almond milk, unsweetened<br><br>
+                                Breakfast Foods:<br>
+                                • 1 1/4 cup Rolled oats, old fashioned<br><br>
+                                Baking & Spices:<br>
+                                • 1/4 tsp Almond extract
+                                • 2 tsp Baking powder
+                                • 1 Blueberries or chocolate chips
+                                • 1 tbsp Coconut sugar
+                                • 1 Optional mix-ins
+                                • 1/4 tsp Salt
+                                • 1 tsp Vanilla extract
+                                • 1/2 cup Whole milk greek yogurt (plain or vanilla)<br>
+                                Oils & Vinegars:<br>
+                                • 1 Butter or olive oil
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><img
+                            src="https://i.pinimg.com/564x/05/6b/f7/056bf7ec92eedb2da07b527cbb3643cb.jpg"></div>
+                    <div class="card_content">
+                        <h2 class="card_title">Foul Medames</h2>
+                        <div class="card_text">
+                            <p>Recipe:
+                            </p>
+                            <p>Produce:<br>
+                                • 1/2 Onion
+                                • 1 tsp Onion powder
+                                • 1 cup Parsley<br><br>
+                                Condiments:<br>
+                                • 1/2 Lemon juice<br><br>
+                                Baking & Spices:<br>
+                                • 1 Dash Black pepper
+                                • 1/4 tsp Paprika
+                                • 1/2 tsp Salt<br><br>
+                                Oils & Vinegars:<br>
+                                • 2 tbsp Olive oil
+                                • 1 Olive oil<br><br>
+                                Nuts & Seeds:<br>
+                                • 1 1/2 tsp Cumin<br><br>
+                                Other:<br>
+                                • 2 cans Ful (or mixed ful and chickpeas)
+                                • 1 To mato (large)
+                                • 1/3 cup Water or reserved ful liquid</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><img
+                            src="https://i.pinimg.com/564x/af/07/a8/af07a83406dc9f481bfa4bdd856b9e9f.jpg"></div>
+                    <div class="card_content">
+                        <h2 class="card_title">Full English Breakfast</h2>
+                        <div class="card_text">
+                            <p><span class="note"></span></p>
+                            <p>Recipe:</p>
+                            <p>Meat:<br>
+                                • 4 slices Back bacon
+                                • 4 slices Black pudding
+                                • 4 Links sausages<br><br>
+                                Produce:<br>
+                                • 1 can Beans
+                                • 1 cup Mushrooms
+                                • 2 Tomatoes, small<br><br>
+                                Refrigerated:<br>
+                                • 4 Eggs<br><br>
+                                Bread & Baked Goods:<br>
+                                • 4 slices Bread
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">our service</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affilitate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#">Email</a></li>
+                        <li><a href="#">Phone number<br> 01002701392</a></li>
+                        <li><a href="#">Location <br> Cairo, Maadi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>cuisines</h4>
+                    <ul>
+                        <li><a href="#">italian</a></li>
+                        <li><a href="#">middle eastern</a></li>
+                        <li><a href="#">french</a></li>
+                        <li><a href="#">american</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

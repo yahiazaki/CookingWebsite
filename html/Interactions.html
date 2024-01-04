@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Interactions.css">
+    <link rel="icon" href="websiteIcon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+    <title>OnlyPans</title>
+
+    <style>
+        .dropdown-menu button:hover {
+            background-color: rgb(157, 235, 157);
+        }
+
+        @media (width<800px) {
+
+            .search-input {
+                visibility: hidden;
+            }
+
+            .search-icon {
+                visibility: hidden;
+            }
+
+            #search-container {
+                visibility: visible;
+            }
+
+            #search-container>button {
+                visibility: visible;
+                width: 25px;
+                height: 25px;
+                background-image: url(search.svg);
+                border: none;
+                background-color: #bbbbbb;
+                position: absolute;
+                left: 50%;
+                top: 8px;
+                transition: 0.3s;
+            }
+
+            #search-bar input {
+                padding: 5px;
+                font-size: 16px;
+                position: absolute;
+                left: 100px;
+                border: 1px solid #ccc;
+                border-radius: 20px;
+                width: 200px;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <nav class="navbar">
+        <button onclick="toggleMenu()" class="burger"></button>
+        <button onclick="goToFirstPage()" class="Homebutton">Home</button>
+        <div class="navDropdowns">
+
+            <div class="Dropdown">
+                <button class="navbutton">
+                    Recipes
+                    <img src="ChevronDown.svg" />
+                </button>
+                <div class="dropdown-menu">
+                    <button onclick="goToBreakfastRecipePage()">Breakfast</button>
+                    <button onclick="goToLunchPage()">Lunch</button>
+                    <button>Dinner</button>
+                    <button>Desert</button>
+                </div>
+            </div>
+            <div class="Dropdown">
+                <button class="navbutton">
+                    Videos
+                    <img src="ChevronDown.svg" />
+                </button>
+                <div class="dropdown-menu">
+                    <button onclick=" goToVideoBreakfastPage()">Breakfast</button>
+                    <button>Lunch</button>
+                    <button>Dinner</button>
+                    <button>Desert</button>
+                </div>
+            </div>
+            <div class="Dropdown">
+                <button class="navbutton">
+                    Submit Recipes
+                    <img src="ChevronDown.svg" />
+                </button>
+                <div class="dropdown-menu">
+                    <button>Featured Submissions</button>
+                    <button onclick="goToSubmitRecipesPage()">Submit a Recipe Form</button>
+                    <button>Submit a Recipe Video</button>
+                    <button>Guidelines</button>
+                </div>
+            </div>
+            <div class="Dropdown">
+                <button class="navbutton" onclick="goToLoginPage()">
+                    Logout
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+            <div class="search-bar">
+
+                <input type="text" class="search-input" placeholder="Search...">
+                <button class="search-icon" type="submit"></button>
+
+                <div id="search-container">
+                    <button onclick="toggleSearch()"></button>
+                    <div id="search-bar">
+                        <form>
+                            <input type="text" placeholder="Search...">
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    <img class="webicon" src="websiteIcon.png">
+        <h1>Users Interactions</h1>
+    </nav>
+
+    <div class="card">
+        <h2>Users interactions</h2>
+        <h3>Year on year comparison</h3>
+        <div id="area-chart">
+            <div class="grid"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="Script.js"></script>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">our service</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affilitate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#">Email</a></li>
+                        <li><a href="#">Phone number<br> 01002701392</a></li>
+                        <li><a href="#">Location <br> Cairo, Maadi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>cuisines</h4>
+                    <ul>
+                        <li><a href="#">italian</a></li>
+                        <li><a href="#">middle eastern</a></li>
+                        <li><a href="#">french</a></li>
+                        <li><a href="#">american</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a class="fb" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="X" href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a class="IG" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="LI" href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

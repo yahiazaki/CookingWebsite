@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Pans.css">
+    <link rel="icon" href="websiteIcon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet" />
+    <script src="Script.js" defer></script>
+    <title>OnlyPans</title>
+
+    <style>
+        .dropdown-menu button:hover {
+            background-color: rgb(157, 235, 157);
+        }
+
+        @media (width<800px) {
+
+            .search-input {
+                visibility: hidden;
+            }
+
+            .search-icon {
+                visibility: hidden;
+            }
+
+            #search-container {
+                visibility: visible;
+            }
+
+            #search-container>button {
+                width: 25px;
+                height: 25px;
+                background-image: url(search.svg);
+                border: none;
+                background-color: #bbbbbb;
+                position: absolute;
+                left: 50%;
+                top: 8px;
+                transition: 0.3s;
+            }
+
+            #search-bar input {
+                padding: 5px;
+                font-size: 16px;
+                position: absolute;
+                left: 100px;
+                border: 1px solid #ccc;
+                border-radius: 20px;
+                width: 200px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1 class="title">Top Rated</h1>
+
+    <nav class="navbar">
+        <button onclick="toggleMenu()" class="burger"></button>
+        <button class="Homebutton">Home</button>
+        <div class="navDropdowns">
+
+            <div class="Dropdown">
+                <button class="navbutton">
+                    Recipes
+                    <img src="ChevronDown.svg" />
+                </button>
+                <div class="dropdown-menu">
+                    <button onclick="goToBreakfastRecipePage()">Breakfast</button>
+                    <button onclick="goToLunchPage()">Lunch</button>
+                    <button>Dinner</button>
+                    <button>Desert</button>
+                </div>
+            </div>
+            <div class="Dropdown">
+                <button class="navbutton">
+                    Videos
+                    <img src="ChevronDown.svg" />
+                </button>
+                <div class="dropdown-menu">
+                    <button onclick=" goToVideoBreakfastPage()">Breakfast</button>
+                    <button>Lunch</button>
+                    <button>Dinner</button>
+                    <button>Desert</button>
+                </div>
+            </div>
+            <div class="Dropdown">
+                <button class="navbutton">
+                    Submit Recipes
+                    <img src="ChevronDown.svg" />
+                </button>
+                <div class="dropdown-menu">
+                    <button>Featured Submissions</button>
+                    <button onclick="goToSubmitRecipesPage()">Submit a Recipe Form</button>
+                    <button>Submit a Recipe Video</button>
+                    <button>Guidelines</button>
+                </div>
+            </div>
+            <div class="Dropdown">
+                <button class="navbutton" onclick="goToLoginPage()">
+                    Logout
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+            <div class="search-bar">
+
+                <input type="text" class="search-input" placeholder="Search...">
+                <button class="search-icon" type="submit"></button>
+
+                <div id="search-container">
+                    <button onclick="toggleSearch()"></button>
+                    <div id="search-bar">
+                        <form>
+                            <input type="text" placeholder="Search...">
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <img class="webicon" src="websiteIcon.png">
+        <h1>OnlyPans</h1>
+    </nav>
+
+    <div class="main">
+        <ul class="cards">
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><img
+                            src="https://i.pinimg.com/564x/cd/ae/63/cdae63246888076effc77636eede8a94.jpg"></div>
+                    <div class="card_content">
+                        <h2 class="card_title"> Oreo Brownies</h2>
+                        <div class="card_text">
+                            <p>Recipe:</p>
+                            <p>Refrigerated:<br>
+                                • 2 Eggs plus 1 egg yolk, large<br>
+                                <br>
+                                Baking & Spices:<br>
+                                • 3/4 cup All-purpose flour<br>
+                                • 1/2 cup Dutch-processed cocoa, unsweetened powder<br>
+                                • 1 1/2 cups Granulated sugar<br>
+                                • 1/2 tsp Salt<br>
+                                • 3/4 cup Semi-sweet chocolate chips<br>
+                                • 2 tsp Vanilla extract<br>
+                                <br>
+                                Oils & Vinegars:<br>
+                                • 3 tbsp (35 grams) *oil<br><br>
+                                Snacks:<br>
+                                • 14 Oreo cookies<br><br>
+                                Dairy:<br>
+                                • 3/4 cup Butter, unsalted
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><img
+                            src="https://i.pinimg.com/564x/05/6b/f7/056bf7ec92eedb2da07b527cbb3643cb.jpg"></div>
+                    <div class="card_content">
+                        <h2 class="card_title">Ful Medames</h2>
+                        <div class="card_text">
+                            <p>Recipe:
+                            </p>
+                            <p>Produce:<br>
+                                • 1/2 Onion
+                                • 1 tsp Onion powder
+                                • 1 cup Parsley<br><br>
+                                Condiments:<br>
+                                • 1/2 Lemon juice<br><br>
+                                Baking & Spices:<br>
+                                • 1 Dash Black pepper
+                                • 1/4 tsp Paprika
+                                • 1/2 tsp Salt<br><br>
+                                Oils & Vinegars:<br>
+                                • 2 tbsp Olive oil
+                                • 1 Olive oil<br><br>
+                                Nuts & Seeds:<br>
+                                • 1 1/2 tsp Cumin<br><br>
+                                Other:<br>
+                                • 2 cans Ful (or mixed ful and chickpeas)
+                                • 1 To mato (large)
+                                • 1/3 cup Water or reserved ful liquid</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="cards_item">
+                <div class="card">
+                    <div class="card_image"><img
+                            src="https://i.pinimg.com/564x/a7/0c/be/a70cbe9870deaeb00a405dd0588ffd45.jpg"></div>
+                    <div class="card_content">
+                        <h2 class="card_title">Baked Nashville Hot Chicken Sandwich with Honey</h2>
+                        <div class="card_text">
+                            <p><span class="note"></span></p>
+                            <p>Recipe:</p>
+                            <p>Meat:<br>
+                                • 2 (8 ounce) boneless, skinless chicken breasts, boneless skinless<br><br>
+                                Produce:<br>
+                                • 1 tbsp Garlic powder
+                                • 2 cups Iceberg lettuce<br><br>
+                                Refrigerated:<br>
+                                • 2 Eggs, large<br><br>
+                                Condiments:<br>
+                                • 1/4 cup Honey<br><br>
+                                Baking & Spices:<br>
+                                • 3/4 cups All purpose flour
+                                • 1/2 tsp Black pepper
+                                • 1 tsp Cayenne pepper
+                                • 4 tsp Paprika, smoked
+                                • 1 1/4 tsp Salt
+                                • 1 tsp Turmeric<br><br>
+                                Bread & Baked Goods:<br>
+                                • 4 Burger buns, lightly toasted
+                                • 1 cup Panko breadcrumbs<br><br>
+                                Dairy:<br>
+                                • 1/2 cup Butter, unsalted
+                                • 1/2 cup Buttermilk ranch
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <button onclick=" goToInteractionsPage()" class="transform">Site Interactions</button>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">our service</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        <li><a href="#">affilitate program</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="#">Email</a></li>
+                        <li><a href="#">Phone number<br> 01002701392</a></li>
+                        <li><a href="#">Location <br> Cairo, Maadi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>cuisines</h4>
+                    <ul>
+                        <li><a href="#">italian</a></li>
+                        <li><a href="#">middle eastern</a></li>
+                        <li><a href="#">french</a></li>
+                        <li><a href="#">american</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a class="fb" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="X" href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a class="IG" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="LI" href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+
+</body>
+
+</html>

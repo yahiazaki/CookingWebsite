@@ -1,0 +1,880 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+
+body {
+    display: grid;
+    place-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #ebebeb;
+}
+
+
+.LoginCard {
+    width: 100%;
+    padding: 70px 30px 44px;
+    border-radius: 24px;
+    background: #ffffff;
+    opacity: 0.9;
+}
+
+@media(width>=500px) {
+    .LoginCard {
+        margin: 0;
+        width: 350px;
+        height: 415px;
+    }
+}
+
+.LoginCard>h2 {
+    margin: 0 0 12px;
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.LoginCard>h3 {
+    margin: 0 0 30px;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.38);
+    text-align: center;
+}
+
+.LoginForm {
+    width: 100%;
+    margin: 0;
+    display: grid;
+    position: relative;
+    bottom: 8px;
+    gap: 8px;
+}
+
+.FrgtPass {
+    color: #216ce7;
+    text-decoration: none;
+    position: relative;
+    color: #1d2229;
+    font-size: 13px;
+    font-family: sans-serif;
+    left: 5px;
+    bottom: 3px;
+}
+
+.SignUpLink {
+    color: #1d2229;
+    text-decoration: none;
+}
+
+.LoginForm>input,
+.LoginCard>button {
+    width: 100%;
+    height: 56px;
+    padding: 0 16px;
+    border-radius: 8px;
+}
+
+.LoginForm>input {
+    border: 2px solid #ebebeb;
+}
+
+.LoginCard>button {
+    width: 100%;
+    height: 56px;
+    position: relative;
+    bottom: 8px;
+    border: 0;
+    background: #5ec95e;
+    font-weight: 600;
+}
+
+.LoginCard>pre {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 70px;
+    font-weight: bolder;
+    font-size: 13px;
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.38);
+    text-align: center;
+}
+
+/*Sign up styling*/
+
+.SignUpCard {
+    width: 100%;
+    padding: 70px 30px 44px;
+    border-radius: 24px;
+    background: #ffffff;
+    opacity: 0.9;
+}
+
+@media(width>=500px) {
+    .SignUpCard {
+        margin: 0;
+        width: 350px;
+        height: 550px;
+    }
+}
+
+.SignUpCard>h2 {
+    margin: 0 0 12px;
+    font-size: 36px;
+    font-weight: 600;
+    position: relative;
+    bottom: 20px;
+    text-align: center;
+}
+
+.SignUpCard>h3 {
+    margin: 0 0 30px;
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+    bottom: 20px;
+    color: rgba(0, 0, 0, 0.38);
+    text-align: center;
+}
+
+.SignUpForm {
+    width: 100%;
+    margin: 0;
+    display: grid;
+    position: relative;
+    bottom: 20px;
+    gap: 8px;
+}
+
+.SignUpForm>input,
+.SignUpCard>button {
+    width: 100%;
+    height: 56px;
+    padding: 0 16px;
+    border-radius: 8px;
+}
+
+.SignUpForm>input {
+    border: 2px solid #ebebeb;
+}
+
+.SignUpCard>button {
+    width: 100%;
+    height: 56px;
+    position: relative;
+    bottom: 8px;
+    border: 0;
+    background: #5ec95e;
+    font-weight: 600;
+}
+
+/*Reset Password styling*/
+.ResetCard {
+    width: 100%;
+    padding: 70px 30px 44px;
+    border-radius: 24px;
+    background: #ffffff;
+    opacity: 0.9;
+}
+
+@media(width>=500px) {
+    .ResetCard {
+        margin: 0;
+        width: 350px;
+        height: 380px;
+    }
+}
+
+.ResetCard>h2 {
+    margin: 0 0 12px;
+    font-size: 36px;
+    font-weight: 600;
+    position: relative;
+    bottom: 20px;
+    text-align: center;
+}
+
+.ResetCard>p {
+    margin: 0 0 30px;
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+    bottom: 20px;
+    color: rgba(0, 0, 0, 0.38);
+    text-align: center;
+}
+
+.ResetForm {
+    width: 100%;
+    margin: 0;
+    display: grid;
+    gap: 8px;
+}
+
+.ResetForm>input,
+.ResetCard>button {
+    width: 100%;
+    height: 56px;
+    padding: 0 16px;
+    border-radius: 8px;
+}
+
+.ResetForm>input {
+    border: 2px solid #ebebeb;
+}
+
+.ResetCard>button {
+    width: 100%;
+    height: 56px;
+    position: relative;
+    top: 10px;
+    border: 0;
+    background: #5ec95e;
+    font-weight: 600;
+}
+
+/*navDropdowns*/
+
+.logout {
+    width: 30px;
+    height: 30px;
+    background-color: #216ce7;
+    border-radius: 20px;
+}
+
+.navbar h1 {
+    background-color: #d8d2d2;
+    color: #5ec95e;
+    display: block;
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    font-size: 4em;
+    font-weight: 700;
+    font-family: 'Ephesis', cursive;
+    top: -3px;
+    text-align: center;
+}
+
+nav>button {
+    border: 0;
+    padding: 0;
+    background: transparent;
+    line-height: 1;
+    color: inherit;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+@media (width>=500px) {
+
+    nav>button {
+        font-size: 16px;
+    }
+}
+
+:is(.navDropdowns, .burger, .navbar) {
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbutton,
+.Homebutton {
+    display: flex;
+    align-items: center;
+    background: #bbbbbb;
+    color: black;
+    font-family: sans-serif;
+    font-weight: bolder;
+    gap: 4px;
+    padding: 0 24px;
+    border: none;
+    height: 100%;
+    opacity: 0.6;
+}
+
+.navbutton>img {
+    display: none;
+}
+
+@media(width>=500px) {
+
+    .navbutton,
+    .Homebutton {
+        padding: 0 10px 0 24px;
+    }
+
+    .navbutton>img {
+        display: block;
+    }
+}
+
+@media(width >=500px) {
+    .Dropdown:hover .navbutton .Homebutton {
+        opacity: 1;
+    }
+}
+
+.Dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.navbar {
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    align-items: stretch;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    height: 50px;
+    background: #bbbbbb;
+
+}
+
+
+.burger {
+    z-index: 3;
+    right: 0;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: #bbbbbb;
+    background-image: url(menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body.open .burger {
+    background-image: url(close.svg);
+    border: none;
+    background-color: #bbbbbb;
+    height: 40px;
+    width: 40px;
+}
+
+@media (width>=500px) {
+    .burger {
+        display: none;
+    }
+}
+
+.navDropdowns {
+    left: -9999px;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #bbbbbb;
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visiblity;
+    transition-duration: 0.3s;
+}
+
+
+@media (width<500px) {
+    body.open .navDropdowns {
+        opacity: 1;
+        visibility: visible;
+        left: 0;
+    }
+
+    #search-bar {
+        visibility: hidden;
+    }
+
+    .navbutton {
+        text-align: center;
+        height: 25px;
+        width: 100%;
+        justify-content: center;
+        border: 1px solid black;
+        margin-top: 5px;
+        background-color: #000000;
+        color: rgb(250, 250, 250);
+
+    }
+
+    .Homebutton {
+        background-color: #bbbbbb;
+        position: absolute;
+        left: 40%;
+    }
+
+    .dropdown-menu {
+        width: 200px;
+    }
+
+}
+
+
+@media (width>=500px) {
+    .navDropdowns {
+        position: static;
+        flex-direction: row;
+        justify-content: flex-start;
+        background: transparent;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media (width>=500px) {
+    .Dropdown {
+        height: 100%;
+        flex-direction: row;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 180px;
+        padding: 6px 24px 10px;
+        margin-bottom: 0;
+        place-items: start;
+        opacity: 0;
+        visibility: hidden;
+        translate: 0 24px;
+        transition: 0.3s;
+    }
+
+    .Dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        translate: 0 0;
+    }
+}
+
+.dropdown-menu {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.dropdown-menu>button {
+    color: #000000;
+    font-family: sans-serif;
+    font-weight: bolder;
+    opacity: 1;
+    height: 40px;
+    width: 100%;
+    border: none;
+    background-color: #ffffff;
+}
+
+@media (width >=500px) {
+    .dropdown-menu>button {
+        opacity: 0.6;
+    }
+
+    .Dropdown:hover .navbutton .Homebutton {
+        opacity: 1;
+    }
+}
+
+.dropdown-menu>button:hover {
+    opacity: 1;
+}
+
+.navbutton>img {
+
+    width: 10px;
+    height: 10px;
+}
+
+.webicon {
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 50px;
+
+}
+
+/*search bar*/
+
+.search-bar {
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 400px;
+}
+
+.search-icon {
+    width: 25px;
+    height: 25px;
+    background-image: url(search.svg);
+    background-repeat: no-repeat;
+    border: none;
+    background-color: #ffffff;
+    position: absolute;
+    right: 20px;
+    top: 8px;
+}
+
+#search-container {
+    visibility: hidden;
+}
+
+
+.transform {
+    width: 50%;
+    height: 56px;
+    padding: 0 16px;
+    border-radius: 8px;
+    position: relative;
+    top: 30px;
+    border: 0;
+    background: #5ec95e;
+    font-weight: 600;
+}
+
+/*footer*/
+.footer {
+    background-color: #24262b;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    padding: 70px 0;
+    margin-top: 100px;
+    position: static;
+    bottom: 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1170px;
+    position: relative;
+    bottom: 30px;
+    margin: auto;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(255, 255, 255);
+    margin: 0 10px 10x 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #000000;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links .fb:hover {
+    color: #ffffff;
+    background-color: #0077b5;
+    transform: rotateY(360deg);
+}
+
+.footer-col .social-links .X:hover {
+    color: #ffffff;
+    background-color: #000000;
+    transform: rotateY(360deg);
+}
+
+.footer-col .social-links .IG:hover {
+    color: #ffffff;
+    background: linear-gradient(to bottom left, #4f5bd5, #962fbf, #d62976, #fa7e1e, #feda75);
+    transform: rotateY(360deg);
+}
+
+.footer-col .social-links .LI:hover {
+    color: #ffffff;
+    background-color: #0077b5;
+    transform: rotateY(360deg);
+}
+
+@media(media<=574px) {
+    .footer-col {
+        width: 100%;
+    }
+
+}
+
+/*cards*/
+
+.main {
+    z-index: 1;
+    max-width: 1200px;
+    margin-top: 200px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cards_item {
+    display: flex;
+    padding: 1rem;
+}
+
+.card_image {
+    height: calc(13*1.2rem);
+    padding: 1.2rem 1.2rem 0;
+    position: relative;
+}
+
+.card_image:before,
+.card_image:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    left: 60%;
+    top: 0;
+    height: 45px;
+    background: #e6e6e6b8;
+    transform: rotate(45deg);
+}
+
+.card_image:after {
+    transform: rotate(-45deg);
+    top: auto;
+    bottom: -22px;
+    left: 40%;
+}
+
+.card_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.cards_item {
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
+}
+
+
+.card {
+
+    background-color: white;
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-left: 30px;
+    background: repeating-linear-gradient(#0000 0 calc(1.2rem - 1px), #8a8c8d 0 1.2rem) right bottom /100% 100%, linear-gradient(#e91e63 0 0) 30px 0/2px 100% #fff;
+    background-repeat: no-repeat;
+    line-height: 1.2rem;
+}
+
+.card_content {
+    padding: 1rem;
+}
+
+h2.card_title,
+p {
+    margin: 1.2rem 0;
+}
+
+h2.card_title {
+    font-size: 1.5em;
+}
+
+.card_text {
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
+.title {
+    position: relative;
+    top: 200px;
+    border-bottom: 5px solid #e91e63;
+    font-size: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.SubmitionCard {
+    width: 50%;
+    margin-top: 200px;
+    padding: 70px 30px 44px;
+    border-radius: 24px;
+    background: #ffffff;
+    opacity: 0.9;
+}
+
+.SubmitionForm {
+    width: 100%;
+    margin: 0;
+    display: grid;
+    position: relative;
+    bottom: 8px;
+    gap: 10px;
+}
+
+#recipeIngredients {
+    max-width: 500px;
+    max-height: 400px;
+}
+
+.SubmitionForm>input,
+.SubmitionCard>button {
+    width: 100%;
+    height: 56px;
+    padding: 0 16px;
+    border-radius: 8px;
+}
+
+.SubmitionForm>textarea {
+    border-radius: 8px;
+    border: 2px solid #ebebeb
+}
+
+#recipeTitle {
+    border: 2px solid #ebebeb;
+}
+
+.SubmitionForm>label {
+    position: relative;
+    left: 5px;
+    margin: 0;
+    padding: 0;
+    font-weight: bolder;
+    font-size: 13px;
+    font-family: sans-serif;
+    color: rgba(0, 0, 0, 0.38);
+}
+
+
+.SubmitionCard>button {
+    width: 100%;
+    height: 56px;
+    position: relative;
+    bottom: 8px;
+    border: 0;
+    background: #5ec95e;
+    font-weight: 600;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.video-container>iframe {
+    margin-top: 200px;
+    width: 50%px;
+    height: 300px;
+}
+
+.video-container>h1 {
+    width: 100%;
+}
+
+.medamesTitle {
+    position: relative;
+    top: 200px;
+    border-bottom: 5px solid #e91e63;
+    font-size: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.EnglishBreakfastTitle {
+    position: relative;
+    top: 200px;
+    border-bottom: 5px solid #e91e63;
+    font-size: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.PankackesTitle {
+    position: relative;
+    top: 200px;
+    border-bottom: 5px solid #e91e63;
+    font-size: 60px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
